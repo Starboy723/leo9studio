@@ -3,7 +3,7 @@ import icon from "../assets/icon.png";
 import { useContext, useState } from "react";
 import Sidebar from "./Sidebar";
 import { UserContext } from "./service/ContextApi";
-import Services from "./services";
+import Services from "./Services.jsx";
 import services from "../utils/services";
 import about from "../utils/about";
 
