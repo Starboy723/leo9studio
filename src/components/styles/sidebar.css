@@ -1,0 +1,96 @@
+.sidebar-container{
+    display:flex;
+    position:absolute;
+    right:-60%;
+    top:10%;
+    flex-direction: column;
+    justify-content:center;
+    align-items:baseline;
+    width:15em;
+    height:98vh;
+    font-family: myFont;
+    background-color:rgb(255, 255, 255);
+}
+.sidebar-container .nav-section{
+    margin-top:20px;
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    padding:5px;
+}
+.sidebar-container .nav-section ul{
+    margin-top:10px;
+    display:flex;
+    flex-direction: column;
+    font-size:1.5rem;
+    font-weight:900;
+    gap:20px;
+}
+.sidebar-container .nav-section ul>li{
+    list-style:none;
+}
+.sidebar-container .contact-section{
+    margin-top:20px;
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    gap:15px;
+    font-size:1.1rem;
+    font-weight:bolder;
+    padding:5px;
+}
+.sidebar-container .btn-section{
+    width:100%;
+    height:70%;
+    margin-top:10px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.sidebar-container .cont-btn{
+    width:80%;
+    height:100%;
+    padding:10px;
+    border-radius:5px;
+    border:none;
+    font-family: myFont;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+.close-btn{
+    position:absolute;
+    top:0px;
+    right:10px;
+}
+.openSideBar{
+    animation-name:openSideBar;
+    animation-duration:.5s;
+    animation-timing-function:cubic-bezier(0.175, 0.885,1.275);
+    animation-fill-mode:forwards;
+}
+.closeSideBar{
+    animation-name:closeSideBar;
+    animation-duration:.5s;
+    animation-timing-function:cubic-bezier(0.175, 0.885,1.275);
+    animation-fill-mode: forwards;
+}
+@keyframes openSideBar {
+    from{
+        right:-60%;
+    }
+    to{
+        right:0%;
+    }
+}
+@keyframes closeSideBar {
+    from{
+        right:0%;
+    }to{
+        right:-60%;
+    }
+}
+@media (min-width:769px) {
+    .sidebar-container{
+        display:none;
+    }
+}

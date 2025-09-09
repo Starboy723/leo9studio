@@ -1,0 +1,91 @@
+@font-face {
+    font-family: milker;
+    src: url("../../assets/Milker.otf");
+}
+.hero-container{
+    font-family: myfont;
+    padding:0px;
+}
+.hero-container .hero-div{
+    display:flex;
+    flex-wrap: wrap;
+}
+.hero-container .hero-div h1{
+    font-size:5rem;
+    font-family:milker;
+    font-weight:100;
+}
+.hero-div section:first-child{
+    width:40%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.hero-div section:last-child{
+    width:50%;
+}
+.div2{
+    margin-top:20px;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+}
+.div2 section:last-child{
+    display: flex;
+    gap:40px;
+    justify-content:center;
+    align-items:center;
+}
+.div2 div{
+    overflow:hidden;
+    position: relative;
+    width:70%;
+    border-left:1px solid;
+}
+.div2 div>section{
+    display:flex;
+    width:calc(200px * 8);
+    animation:animation 20s linear infinite;
+}
+.div2 div>section img{
+    width:70px;
+    object-fit:cover;
+}
+@keyframes animation {
+    0%{
+        transform:translateX(100%);
+    }100%{
+        transform:translateX(-90%);
+    }
+}
+
+@media (max-width:768px) {
+    .hero-container .hero-div{
+    display:flex;
+    flex-direction: column;
+    }
+    .hero-div section:first-child{
+        justify-content:center;
+        align-items:center;
+        width:100%;
+    }
+    .hero-div section:last-child{
+        width:100%;
+    }
+    .hero-container .hero-div h1{
+    font-size:10vw;
+    font-family:milker;
+    font-weight:100;
+}
+.hero-container .hero-div span{
+    font-size:5vw;
+}
+   .div2{
+    flex-direction: column;
+    justify-content:center;
+    align-items:baseline;
+   }
+   .div2 div{
+    width:100%;
+   }
+}
